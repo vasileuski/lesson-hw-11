@@ -1,0 +1,23 @@
+.adaptive {
+   background: url('./images/adaptive-background.png') no-repeat center;
+   background-size: cover;
+   height: 868px;
+
+   @include md {
+      height: 100%;
+   }
+
+   &__title-cursive {
+      padding-top: 42px;
+
+      @include sm
+   }
+
+   &__title {
+      margin-bottom: 80px;
+
+      @include sm {
+         margin-bottom: 40px;
+      }
+   }
+}

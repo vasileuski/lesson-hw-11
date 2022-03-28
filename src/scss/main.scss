@@ -1,0 +1,18 @@
+@import "reset";
+@import "variables";
+@import "breakpoints";
+@import "base";
+
+@import "screens/header";
+@import "screens/intro";
+@import "screens/about";
+@import "screens/statistic";
+@import "screens/work";
+@import "screens/adaptive";
+@import "screens/example";
+@import "screens/swiper";
+@import "screens/footer";
+
+@import "../../node_modules/swiper/swiper-bundle.css";
+
+

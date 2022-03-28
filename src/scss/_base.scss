@@ -1,0 +1,189 @@
+body {
+   font-family: $raleway-font-stack;
+   font-size: 18px;
+   line-height: 21px;
+   
+   @include md {
+      font-size: 14px;
+      line-height: 16px;
+   }
+}
+
+.container {
+   max-width: 1170px;
+   margin: 0 auto;
+   padding: 0 10px;
+
+   @include md {
+      max-width: 980px;
+   }
+
+   @include sm {
+      max-width: 320px;
+   }
+}
+
+h1 {
+   font-family: $montserrat-font-stack;
+   font-weight: 700;
+   font-size: 144px;
+   line-height: 176px;
+   color: $white;
+
+   @include md {
+      font-size: 96px;
+      line-height: 117px;
+   }
+
+   @include sm {
+      font-size: 48px;
+      line-height: 59px;
+   }
+}
+
+h2 {
+   font-family: $kaushan-font-stack;
+   font-weight: 400;
+   font-size: 64px;
+   line-height: 93px;
+   color: $white;
+
+   @include md {
+      font-size: 48px;
+      line-height: 70px;
+   }
+
+   @include sm {
+      font-size: 36px;
+      line-height: 52px;
+   }
+}
+
+h3 {
+   font-weight: 900;
+   font-size: 36px;
+   line-height: 42px;
+   text-transform: uppercase;
+   color: $black;
+
+   @include md {
+      font-size: 24px;
+      line-height: 28px;
+   }
+}
+
+h4 {
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 28px;
+
+   @include md {
+      font-size: 18px;
+      line-height: 21px;
+   }
+}
+
+h5 {
+   font-weight: 400; 
+   font-size: 18px;
+   line-height: 21px;
+}
+
+h6 {
+   font-weight: 700;
+   font-size: 13px;
+   line-height: 15px;
+}
+
+li {
+   list-style-type: none;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+   cursor: pointer;
+}
+
+.button {
+   font-style: inherit;
+   background: transparent;
+   border: 3px white solid;
+   font-family: 'Raleway';
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 28px;
+   text-transform: uppercase;
+   color: #FFFFFF;
+   padding: 23px 105px;
+   transition: .2s linear;
+   cursor: pointer;
+
+   &:hover, &:active, &:focus {
+      background-color: $white;
+      color: #E4BE8D;
+   }
+
+   @include md {
+      font-size: 18px;
+      line-height: 21px;
+   }
+}
+
+.title-cursive {
+   font-size: 30px;
+   color: $black;
+   text-align: center;
+   margin-top: 42px;
+
+   @include md {
+      font-size: 24px;
+      line-height: 35px;
+      margin-top: 30px;
+   }
+}
+
+.title {
+   text-align: center;
+   position: relative;
+   padding-bottom: 24px;
+   margin-bottom: 40px;
+
+   &::after {
+      content: "";
+      position: absolute;
+      left: 42.75%;
+      bottom: 0;
+      width: 170px;
+      height: 4px;
+      background: $red;
+
+      @include md {
+         width: 116px;
+         left: 43.2%;
+      }
+   
+      @include sm {
+         width: 134px;
+         left: 30%;
+      }
+   }
+}
+
+@mixin linear-gradient {
+   background-image: linear-gradient(45deg, #fa709a, #fee140, #fff);
+   background-size: 400% 400%;
+   animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+   0% {
+      background-position: 0 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0 50%;
+   }
+}

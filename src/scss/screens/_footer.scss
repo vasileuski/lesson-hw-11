@@ -1,0 +1,317 @@
+.footer {
+   background: url('./images/footer-title-background.png') no-repeat center;
+   background-size: cover;
+   height: 231px;
+   padding-top: 42px;
+
+   &__title-icon {
+      margin-left:  auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+   }
+
+   &__title {
+      margin-bottom: 80px;
+   }
+
+   &__content {
+      display: flex;
+      justify-content: space-between;
+
+      @include sm {
+         flex-direction: column;
+      }
+   }
+
+   &__media {
+      max-width: 33.333%;
+
+      @include sm {
+         max-width: 100%;
+      }
+   }
+
+   &__blogs {
+      max-width: 42.34%;
+
+      @include sm {
+         max-width: 100%;
+      }
+   }
+
+   &__instagram {
+      max-width: 24.3%;
+
+      @include sm {
+         max-width: 100%;
+      }
+   }
+
+   &__copyright-text {
+      text-align: center;
+      text-transform: uppercase;
+      position: relative;
+      padding-top: 15px;
+      padding-bottom: 30px;
+
+      &::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 1px;
+         width: 100%;
+         background-color: $gray;
+      }
+   }
+}
+
+.media {
+
+   &__logo {
+      margin-bottom: 40px;
+
+      @include md {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__about {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: $gray;
+      margin-bottom: 40px;
+   }
+
+   &__followers {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: $black;
+      position: relative;
+      padding-bottom: 10px;
+      
+      &:after {
+         content: "";
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         height: 1px;
+         width: 100%;
+         background-color: $gray;
+      }
+
+      @include md {
+         font-size: 14px;
+         line-height: 30px;
+      }
+   }
+
+   &__follow {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+      color: $gray;
+
+      @include md {
+         font-size: 12px;
+         line-height: 14px;
+      }
+   }
+
+   &__followers-number {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: $black;
+
+      @include md {
+         font-size: 24px;
+         line-height: 30px;
+      }
+   }
+
+   &__social-networks {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__social-networks {
+      margin-bottom: 30px;
+
+      @include sm {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__follow {
+      align-self: center;
+   }
+
+   &__socials-list {
+      display: flex;
+   }
+
+   &__socials {
+      margin-right: 7px;
+   }
+
+   &__socials-icon {
+
+      @include md {
+         width: 13px;
+      }
+   }
+
+   &__form {
+      border: 1px solid $gray;
+   }
+
+   &__input-email {
+      width: calc(100% - 139px);
+      padding: 20px 0;
+      border: none;
+      border-right: none;
+      text-align: center;
+      font-weight: 400;
+      line-height: 21px;
+      color: #C6CBCD;
+
+      @include md {
+         font-size: 14px;
+         line-height: 16px;
+      }
+   }
+
+   &__input-subscribe {
+      padding: 20px 0;
+      border: none;
+      background: $green;
+      width: 134px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #FFFFFF;
+
+      &:hover, &:active, &:focus {
+         background: #87D2C4;
+         cursor: pointer;
+      }
+
+      @include md {
+         font-size: 14px;
+         line-height: 16px;
+      }
+   }
+}
+
+.blogs {
+
+   &__news {
+      display: flex;
+      margin-bottom: 14px;
+
+      &:last-child {
+         margin-bottom: none;
+      }
+
+      &:hover, &:active, &:focus {
+         opacity: .8;
+         cursor: pointer;
+      }
+   }
+
+   &__news-image {
+      margin-right: 14px;
+
+      @include md{
+         max-width: 115px;
+      }
+   }
+
+   &__news-title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      text-transform: uppercase;
+      color: $black;
+      margin-bottom: 20px;
+
+      @include md {
+         font-size: 14px;
+         line-height: 16px;
+      }
+   }
+
+   &__news-date {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+      color: $black;
+
+      @include md {
+         font-size: 11px;
+         line-height: 13px;
+      }
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 48px;
+      text-transform: uppercase;
+      color: $black;
+      padding: 36px 0;
+
+      @include md {
+         line-height: 36px;
+         font-size: 18px;
+      }
+   }
+}
+
+.instagram {
+
+   &__grid {
+      display: grid;
+      grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+      margin-bottom: 30px;
+   }
+
+   &__title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 48px;
+      text-transform: uppercase;
+      color: $black;
+      padding: 36px 0;
+
+      @include md {
+         line-height: 36px;
+         font-size: 18px;
+      }
+   }
+
+   &__photo {
+      &:hover, &:active, &:focus {
+         cursor: pointer;
+         opacity: .8;
+      }
+   }
+
+   &__link {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+      color: $black;
+   }
+}

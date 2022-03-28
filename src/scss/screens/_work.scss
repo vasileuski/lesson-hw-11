@@ -1,0 +1,54 @@
+.work {
+
+   &__title {
+      margin-bottom: 80px;
+
+      @include md {
+         margin-bottom: 60px;
+      }
+
+      @include sm {
+         margin-bottom: 40px;
+      }
+   }
+
+   &__cards{
+      display: grid;
+      grid-template:  50% 50%/ 1fr 1fr 1fr;
+      justify-content: space-between;
+
+      @include sm {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+
+   &__card {
+      display: flex;
+      margin-right: 30px;
+      width: 100%;
+      margin-bottom: 140px;
+
+      @include md {
+         margin-bottom: 40px;
+      }
+   }
+
+   &__card-image {
+      margin-right: 30px;
+      align-self: flex-start;
+   }
+
+   &__card-title {
+      text-transform: uppercase;
+      padding-top: 13px;
+   }
+
+   &__card-text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      padding-top: 13px;
+      text-transform: none;
+   }
+}

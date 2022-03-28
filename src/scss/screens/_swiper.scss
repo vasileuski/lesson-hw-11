@@ -1,0 +1,98 @@
+.comment {
+   
+
+   
+
+.swiper {
+   max-width: 1170px;
+}
+
+.comment {
+   display: flex;
+   padding: 42px 0;
+   background-color: #f8f8f8;
+
+   @include sm {  
+      flex-direction: column;
+   }
+}
+}
+
+.comment__image {
+   margin-left: 87px;
+   padding: 35px;
+   border: 2px solid $green;
+
+   @include md {
+      width: 68px;
+      padding: 23px;
+      height: 68px;
+   }
+
+   @include sm {
+      display: none;
+   }
+}
+
+.comment__quote {
+   display: inline-block;
+   max-width: 770px;
+   margin-left: 30px;
+
+   @include md {
+      margin-left: 15px;
+      margin-right: 50px;
+      max-width: 674px;
+   }
+
+   @include sm {
+      margin: 0 auto;
+      max-width: 379px;
+   }
+}
+
+.comment__quote-text {
+   font-style: italic;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 28px;
+   color: #A9AFB1;
+   margin-bottom: 24px;
+
+   @include md {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 10px;
+   }
+}
+
+.comment__quote-author {
+   font-family: $kaushan-font-stack;
+   font-weight: 400;
+   font-size: 30px;
+   line-height: 44px;
+   position: relative;
+   padding-left: 86px;
+
+   @include md {
+      font-size: 24px;
+      line-height: 35px;
+   }
+}
+
+.comment__quote-author::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: 50%;
+   width: 47px;
+   height: 4px;
+   background: $red;
+}
+.swiper-button-next:hover, .swiper-button-next:active, .swiper-button-next:focus {
+   opacity: .7;
+}
+
+.swiper-button-prev:hover, .swiper-button-prev:active, .swiper-button-prev:focus {
+   opacity: .7;
+}

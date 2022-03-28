@@ -1,0 +1,105 @@
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 3;
+
+   &__container {
+   display: flex;
+   justify-content: space-between;
+   padding-top: 42px;
+
+      @include md {
+      padding-top: 25px;
+      }  
+   }
+
+   &__logo {
+      @include md {
+         width: 67px;
+      }
+
+      @include sm {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+      }
+   }
+
+   &__logo-image {
+      @include sm {
+         width: 54px;
+      }
+   }
+
+   &__navigation {
+      display: flex;
+      flex-wrap: wrap;
+
+      @include sm {
+         display: none;
+      }
+   }
+
+   &__list {
+      display: flex;
+   }
+
+   &__list-item {
+      display: flex;
+      align-items: center;        
+      width: 124px;
+      text-transform: uppercase;
+      justify-content: center;
+      color: #fff;
+
+      @include md {
+         width: 84px;
+      }
+   }
+
+   &__list-link {
+      display: block;
+      position: relative;
+      transition: .5s;
+      
+      &:before {
+         content: '';
+         position: absolute;
+         width: 120%;
+         height: 3px;
+         background: $orange;
+         left: -10%;
+         bottom: -5px;
+         transition: .2s linear;
+         transform: scale(0);
+      }
+      &:hover, &:active, &:focus {
+         color: $orange;
+      }
+      &:hover:before, &:focus:before, &:active:before {
+         transform: scale(1);
+      }
+   }
+   
+   &__icons {
+      display: flex;
+      margin-left: 17px;
+      width: 100px;
+      justify-content: space-between;
+      align-items: center;
+
+      @include md {
+         width: 70px;
+      }
+   }
+
+   &__burger-image {
+      display: none;
+
+      @include sm {
+         display: inline-block;
+      }
+   }
+}
